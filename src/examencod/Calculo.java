@@ -24,7 +24,7 @@ public class Calculo {
         //si el número es negativo cambiamos a cero y
         //establecemos la propiedad "mensajeResultado" a "Error"
         if (numero < 0) {
-            mensajeResultado = "ERROR negativo";
+            mensajeResultado = "Error, los números no pueden ser negativos";
         }
     }
 
@@ -33,7 +33,7 @@ public class Calculo {
         //si el número es negativo cambiamos a cero y
         //establecemos la propiedad "mensajeResultado" a "Error"
         if (numero < 0) {
-            mensajeResultado = "ERROR negativo";
+            mensajeResultado = "Error, los números no pueden ser negativos\"";
         }
     }
 
@@ -72,10 +72,10 @@ public class Calculo {
                 }
             } while (resto != 0);
 
-            mensajeResultado = "Correcto";
+            mensajeResultado = "Cálculo correcto";
             return numDiv2;
         } catch (Exception e) {
-            mensajeResultado = "ERROR exception";
+            mensajeResultado = "Error en cálculo de MCD: " + e.getMessage();;
             return 0;
         }
     }
