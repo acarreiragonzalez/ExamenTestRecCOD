@@ -13,7 +13,7 @@ public class Calculo {
 
     private int numero1;
     private int numero2;
-    private String mensajeResultado = "";
+    private String mensajeResultado;
 
     public Calculo() {
     }
@@ -24,7 +24,7 @@ public class Calculo {
         //si el número es negativo cambiamos a cero y
         //establecemos la propiedad "mensajeResultado" a "Error"
         if (numero < 0) {
-            mensajeResultado = "Error, los números no pueden ser negativos";
+            mensajeResultado = "ERROR negativo";
         }
     }
 
@@ -33,7 +33,7 @@ public class Calculo {
         //si el número es negativo cambiamos a cero y
         //establecemos la propiedad "mensajeResultado" a "Error"
         if (numero < 0) {
-            mensajeResultado = "Error, los números no pueden ser negativos";
+            mensajeResultado = "ERROR negativo";
         }
     }
 
@@ -58,9 +58,11 @@ public class Calculo {
         int resto;
         int numDiv1 = num1;
         int numDiv2 = num2;
-        
-        if (num1 <0 || num2 < 0) return 0;
-       
+
+        if (num1 < 0 || num2 < 0) {
+            return 0;
+        }
+
         try {
             do {
                 resto = numDiv1 % numDiv2;
@@ -70,10 +72,10 @@ public class Calculo {
                 }
             } while (resto != 0);
 
-            mensajeResultado = "Cálculo correcto";
+            mensajeResultado = "Correcto";
             return numDiv2;
         } catch (Exception e) {
-            mensajeResultado = "Error en cálculo de MCD: " + e.getMessage();
+            mensajeResultado = "ERROR exception";
             return 0;
         }
     }
